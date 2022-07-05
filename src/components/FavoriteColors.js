@@ -10,11 +10,13 @@ const favColStyle = {
     height: "20vh"
 }
 
-function FavoriteColors({favs, removeFromFavorites}) {
+function FavoriteColors({favorites, removeFromFavorites, numbers}) {
   return (
     <div style={favColStyle}>
       <h1> My Favorite Colors</h1>
-        {favs.map((color, idx) => <Color color={color} key={idx} handleClick={removeFromFavorites}/>)}
+        {favorites.map((color, idx) => <Color color={color} key={idx} handleClick={removeFromFavorites}/>)}
+        <h1>My Favorite Numbers</h1>
+        {numbers.map(num => <h1 key={num}>{num}</h1>)}
     </div>
   )
 }
